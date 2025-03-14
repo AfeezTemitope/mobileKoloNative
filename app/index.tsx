@@ -2,12 +2,14 @@ import React from "react";
 import { SafeAreaView, Image, Text, StyleSheet, Platform, TouchableOpacity, Dimensions, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import {useRouter} from "expo-router";
 
 const { width } = Dimensions.get("window");
 
 const HomeScreen = () => {
+    const route = useRouter()
     const handleIconPress = () => {
-        console.log('%cHello, styled console!', 'color: blue; font-size: 20px; font-weight: bold; background-color: yellow; padding: 5px; border-radius: 5px;');
+        route.push('/GettingStarted')
     };
 
     return (
