@@ -26,8 +26,12 @@ const HomeScreen = () => {
                 onPress={handleIconPress}
                 accessibilityLabel="Planet Icon"
                 accessibilityRole="button">
-                <Ionicons name="planet-outline" size={62} color="#fff" />
+                <Ionicons name="cash-sharp" size={62} color="#fff" />
+
             </TouchableOpacity>
+                <Text style={styles.texts}>click me to start saving</Text>
+
+
         </SafeAreaView>
     );
 };
@@ -64,9 +68,17 @@ const styles = StyleSheet.create({
         padding: 10,
         color: "#f0f0f0",
         fontSize: width * 0.05,
-        fontWeight: "bold",
+        // fontWeight: "bold",
         zIndex: 1,
     },
+    texts:{
+        position: "absolute",
+        bottom: 30,
+        alignSelf: "center",
+        color: "#f0f0f0",
+        zIndex:1,
+        textAlign: "center",
+    }
 });
 
 export default HomeScreen;
